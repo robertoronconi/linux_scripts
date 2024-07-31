@@ -15,13 +15,13 @@ echo -
 	echo "#########################"
 echo -
 sleep 5
-sudo apt autoremove -y; sudo apt autoclean; sudo apt clean; sudo aptitude clean; sudo aptitude autoclean;
+sudo apt autoremove -y; sudo apt autoclean; sudo apt clean; sudo aptitude clean; sudo aptitude autoclean; sudo du -sh  /var/cache/apt; sudo apt-get install deborphan; sudo deborphan | xargs sudo apt-get -y remove --purge;
 echo
   	echo "#########################"
 	echo        "     A actualizar !"
 	echo "#########################"
 	 echo
-sudo apt install nala -y; sudo aptitude update; sudo snap refresh; sudo flatpak update -y; sudo apt full-upgrade -y; sudo apt upgrade -y; sudo apt-get dist-upgrade; sudo apt install -f;  sudo dpkg --configure -a;  sudo apt --fix-broken install; sudo nala update; sudo nala upgrade;
+sudo aptitude update; sudo snap refresh; sudo flatpak update -y; sudo apt full-upgrade -y; sudo apt upgrade -y; sudo apt-get dist-upgrade; sudo apt install -f;  sudo dpkg --configure -a;  sudo apt --fix-broken install; sudo nala update; sudo nala upgrade;
     echo
  echo "- Algunos complementos
 – Nala (front-end APT) https://gitlab.com/volian/nala
